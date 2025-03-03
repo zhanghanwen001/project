@@ -1,0 +1,6 @@
+com\mine\restful\service\impl\UserServiceImpl.class
+com\mine\restful\entity\User.class
+com\mine\restful\MyDistributedSystemApplication.class
+com\mine\restful\controller\UserController.class
+com\mine\restful\service\UserService.class
+com\mine\restful\dao\UserMapper.class
