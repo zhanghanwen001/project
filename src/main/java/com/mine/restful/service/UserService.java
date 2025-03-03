@@ -1,13 +1,17 @@
 package com.mine.restful.service;
 
-import com.mine.restful.entity.User;
+import com.mine.restful.entity.SysUser;
 
 import java.util.List;
 
 public interface UserService {
-    List<User> findAll();
-    User findById(Long id);
-    void insert(User user);
-    void update(User user);
-    void deleteById(Long id);
+    List<SysUser> findAll();
+
+    SysUser findById(Integer id);
+
+    void insert(SysUser user);
+
+    void update(SysUser user);
+
+    void deleteById(Integer id);
 }

@@ -1,7 +1,7 @@
 package com.mine.restful.service.impl;
 
-import com.mine.restful.dao.UserMapper;
-import com.mine.restful.entity.User;
+import com.mine.restful.entity.SysUser;
+import com.mine.restful.mapper.SysUsersMapper;
 import com.mine.restful.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,30 +11,30 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserMapper userMapper;
+    private SysUsersMapper userMapper;
 
     @Override
-    public List<User> findAll() {
-        return userMapper.findAll();
+    public List<SysUser> findAll() {
+        return userMapper.selectAll();
     }
 
     @Override
-    public User findById(Long id) {
-        return userMapper.findById(id);
+    public SysUser findById(Integer id) {
+        return userMapper.selectByPrimaryKey(id);
     }
 
     @Override
-    public void insert(User user) {
+    public void insert(SysUser user) {
         userMapper.insert(user);
     }
 
     @Override
-    public void update(User user) {
+    public void update(SysUser user) {
         userMapper.update(user);
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(Integer id) {
         userMapper.deleteById(id);
     }
 }
