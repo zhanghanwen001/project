@@ -21,7 +21,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, username, password, salt, email, mobile, valid, dept_id, created_time, modifiy_time, creater, modified_user
+        id, user_name, password, salt, email, mobile, valid, dept_id, created_time, modifiy_time, creater, modified_user
     </sql>
 
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
