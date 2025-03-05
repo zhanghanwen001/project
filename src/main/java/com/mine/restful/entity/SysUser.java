@@ -20,6 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SysUser implements Serializable {
 
+    @ApiModelProperty("")
     private Integer id;
     /**
     * 用户名
