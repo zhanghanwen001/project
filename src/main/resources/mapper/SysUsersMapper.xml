@@ -15,13 +15,13 @@
         <result column="valid" property="valid" jdbcType="BIGINT"/>
         <result column="dept_id" property="deptId" jdbcType="BIGINT"/>
         <result column="created_time" property="username" jdbcType="DATE"/>
-        <result column="modifiy_time" property="modifiedTime" jdbcType="DATE"/>
+        <result column="modifiy_time" property="modifiedTime" jdbcType="VARCHAR"/>
         <result column="creater" property="creater" jdbcType="VARCHAR"/>
         <result column="modified_user" property="modifiedUser" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id, use_rname, password, salt, email, mobile, valid, dept_id, created_time, modifiy_time, creater, modified_user
+        id, user_name, password, salt, email, mobile, valid, dept_id, created_time, modifiy_time, creater, modified_user
     </sql>
 
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
