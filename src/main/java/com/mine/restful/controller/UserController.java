@@ -5,7 +5,7 @@ import com.mine.restful.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -17,10 +17,7 @@ public class UserController {
 
     @GetMapping
     public List<SysUser> getAllUsers() {
-        ArrayList<SysUser> list = new ArrayList<>();
-        list.add(new SysUser());
-        return list;
-//        return userService.findAll();
+        return userService.findAll();
     }
 
     @GetMapping("/{id}")
@@ -29,12 +26,12 @@ public class UserController {
     }
 
     @PostMapping
-    public void createUser(@RequestBody SysUser user) {
+    public void createUser(@Valid @RequestBody SysUser user) {
         userService.insert(user);
     }
 
     @PutMapping("/{id}")
-    public void updateUser(@PathVariable Integer id, @RequestBody SysUser user) {
+    public void updateUser(@PathVariable Integer id, @Valid @RequestBody SysUser user) {
         user.setId(id);
         userService.update(user);
     }

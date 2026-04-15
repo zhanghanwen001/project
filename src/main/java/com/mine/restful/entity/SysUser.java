@@ -71,7 +71,7 @@ public class SysUser implements Serializable {
     * 修改时间
     */
     @ApiModelProperty("修改时间")
-    private String modifiedTime;
+    private Date modifiedTime;
     /**
     * 创建用户
     */
